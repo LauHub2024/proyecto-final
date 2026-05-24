@@ -3,5 +3,5 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/proyecto-final/'
+  base: process.env.NODE_ENV === "production" ? "/proyecto-final/" : "/"
 })
